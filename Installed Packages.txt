@@ -1,0 +1,13 @@
+
+# pip install google-api-python-client
+# pip install speechrecognition 
+# pip install edge-TTS
+# pip install pyaudio 
+# pip install setuptools
+# pip install google-genai
+# pip install playsound==1.2.2
+
+
+
+
+# (created virtual environment [venv])
