@@ -1,8 +1,15 @@
 from google import genai
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # loads .env into environment
 
 # Configure client with API key
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+API_KEY = os.getenv("GEMINI_API_KEY")
+if not API_KEY:
+    raise RuntimeError("GEMINI_API_KEY not found. Check .env file.")
+
+client = genai.Client(api_key=API_KEY)
 
 SYSTEM_PROMPT = """
 You are Jarvis, a voice assistant.
